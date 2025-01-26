@@ -223,10 +223,10 @@ h6 {
 }
 .section-main__container {
   padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 100%
+  justify-content: space-between
 }
 .section-main img {
   height: auto
@@ -260,14 +260,16 @@ h6 {
   font-size: 1.125rem;
   color: #fff;
   border-radius: .75rem;
-  padding: .9375rem
+  padding: .9375rem;
+  transition: all .3s
 }
 .login__authorize {
   font-weight: 700;
   font-size: 1.125rem;
   border: .125rem #000 solid;
   border-radius: .75rem;
-  padding: .9375rem
+  padding: .9375rem;
+  transition: all .3s
 }
 .card-info {
   background: #cedeff
@@ -280,7 +282,22 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.875rem
+  gap: 1.875rem;
+  transition: all .3s;
+  opacity: 0
+}
+.card-info__wrapper:nth-child(even) {
+  -webkit-transform: translateX(-12.5rem);
+  transform: translateX(-12.5rem)
+}
+.card-info__wrapper:nth-child(odd) {
+  -webkit-transform: translateX(12.5rem);
+  transform: translateX(12.5rem)
+}
+.card-info__wrapper.show {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1
 }
 .section-info__text-wrapper {
   max-width: 33.75rem
@@ -333,7 +350,8 @@ h6 {
   font-size: 1.125rem;
   border-radius: .75rem;
   padding: .9375rem 2.5rem;
-  background-color: #fff
+  background-color: #fff;
+  transition: all .3s
 }
 .section-footer {
   background: #00287b
@@ -484,5 +502,17 @@ h6 {
 @media (any-hover:hover) {
   .fp-bullets .fp-bullet:hover {
     opacity: 1
+  }
+  .login__start:hover {
+    background: #0f47c2;
+    scale: 1.05
+  }
+  .login__authorize:hover {
+    background: rgba(206,222,255,.631372549);
+    scale: 1.05
+  }
+  .section-join__button:hover {
+    background: #f0f0f0;
+    scale: 1.05
   }
 }

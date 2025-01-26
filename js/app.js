@@ -402,5 +402,14 @@
             }));
         }
     }), 0);
+    const cards = document.querySelectorAll(".card-info__wrapper");
+    const observer = new IntersectionObserver((entries => {
+        entries.forEach((entry => {
+            if (entry.isIntersecting) entry.target.classList.add("show"); else entry.target.classList.remove("show");
+        }));
+    }), {
+        threshold: .2
+    });
+    cards.forEach((card => observer.observe(card)));
     window["FLS"] = true;
 })();
