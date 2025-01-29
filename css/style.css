@@ -226,7 +226,8 @@ h6 {
   padding-bottom: 1.25rem;
   display: flex;
   align-items: center;
-  justify-content: space-between
+  justify-content: space-between;
+  height: calc(100% - 60px)
 }
 .section-main img {
   height: auto
@@ -315,6 +316,40 @@ h6 {
 }
 .section-info__image {
   max-width: 70%
+}
+.full-page__section {
+  background: #cedeff
+}
+.section-start__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%
+}
+.section-start__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .9375rem
+}
+.section-start__title {
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0656ff;
+  max-width: 21.875rem;
+  text-align: center
+}
+.section-start__image {
+  max-width: 53.125rem
+}
+.section-start__button {
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: .75rem;
+  padding: .9375rem 4.375rem;
+  background-color: #fff;
+  transition: all .3s
 }
 .section-join {
   background: #0656ff
@@ -416,6 +451,9 @@ h6 {
   .text-wrapper__title {
     font-size: 2.8125rem
   }
+  .section-start__title {
+    font-size: 2.375rem
+  }
   .section-join__title {
     font-size: 2.375rem
   }
@@ -429,6 +467,9 @@ h6 {
   }
   .text-wrapper__title {
     font-size: 1.375rem
+  }
+  .section-start__title {
+    font-size: 1.5625rem
   }
   .section-join__title {
     font-size: 1.5625rem
@@ -493,6 +534,9 @@ h6 {
   .text-wrapper__title {
     font-size: clamp(1.375rem ,.8695054945rem + 2.5274725275vw ,2.8125rem)
   }
+  .section-start__title {
+    font-size: clamp(1.5625rem ,1.2767857143rem + 1.4285714286vw ,2.375rem)
+  }
   .section-join__title {
     font-size: clamp(1.5625rem ,1.2767857143rem + 1.4285714286vw ,2.375rem)
   }
@@ -510,6 +554,10 @@ h6 {
   }
   .login__authorize:hover {
     background: rgba(206,222,255,.631372549);
+    scale: 1.05
+  }
+  .section-start__button:hover {
+    background: #f0f0f0;
     scale: 1.05
   }
   .section-join__button:hover {
